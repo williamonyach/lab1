@@ -44,7 +44,7 @@ exercise2 is a function that returns 42 (instead of failing). When you
 submit, the Exercise 2 unit test should then pass.
 ......................................................................*)
 
-let exercise2 () = failwith "exercise2 not implemented" ;;
+let exercise2 () = 42 ;;
 
 (* From here on, you'll want to test your lab solutions locally before
 submitting them at the end of lab to Gradescope. A simple way to do that
