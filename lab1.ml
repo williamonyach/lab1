@@ -165,7 +165,7 @@ let exercise6b : string =
   let greet y = "Hello " ^ y
   in greet "World!";;
 
-let exercise6c : int -> float =
+let exercise6c : float -> float =
   fun x -> x +. 11.1 ;;
 
 let exercise6d : int -> bool =
