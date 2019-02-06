@@ -101,7 +101,7 @@ appropriate OCaml expression to assign the value to the variable
 exercise1 below.
 ......................................................................*)
 
-let exercise3 () = failwith "exercise3 not implemented" ;;
+let exercise3 () = ~-(5-3) ;;
 
 (* Hint: The OCaml concrete expression
 
@@ -114,8 +114,15 @@ Exercise 4: Draw the tree that the concrete syntax "~- 5 - 3" does
 correspond to. Check it with a member of the course staff if you'd
 like.
 ......................................................................*)
-
-
+(*         -
+           ^
+          / \
+         /   \
+        ~-    3
+        |
+        |
+        5
+)
 (*......................................................................
 Exercise 5: Associativity plays a role in cases when two operators
 used in the concrete syntax have the same precedence. For instance,
@@ -137,7 +144,7 @@ the operator. Use this expression to determine the associativity of
 the operator. Check your answer with a member of the course staff if
 you'd like.
 ......................................................................*)
-
+2 ** 4 ** 3
 (*======================================================================
 Part 2: Types and type inference
 
@@ -150,19 +157,19 @@ error is generated.
 
 (*  <--- After you've replaced the ???s, remove this start of comment line
 
-let exercise6a : ??? = 42 ;;
+let exercise6a : int = 42 ;;
 
-let exercise6b : ??? =
+let exercise6b : string =
   let greet y = "Hello " ^ y
   in greet "World!";;
 
-let exercise6c : ??? =
+let exercise6c : int -> float =
   fun x -> x +. 11.1 ;;
 
-let exercise6d : ??? =
+let exercise6d : int -> bool =
   fun x -> x < x + 1 ;;
 
-let exercise6e : ??? =
+let exercise6e : int -> float -> int =
   fun x -> fun y -> x + int_of_float y ;;
 
 
