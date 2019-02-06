@@ -226,9 +226,9 @@ to the function.
 let say_hello (name : string) : string =
 
     if name = "Gabby" || name = "gabby" then
-      "Hi Gabby. Welcome home! How are you today?"
+      "Hi " ^name^ ". Welcome home! How are you today?"
     else 
-      "Hi" ^name^ ". How are you today?" ;;
+      "Hi " ^name^ ". How are you today?" ;;
 
 (*......................................................................
 Exercise 9: Define a function, small_bills, that determines, given a
@@ -241,8 +241,10 @@ integers. For this lab, you may assume all prices given are
 non-negative.
 ......................................................................*)
 let small_bills (price : int) : bool =
-  failwith "small_bills not implemented" ;;
-
+  if price mod 20 <> 0 
+    then true 
+  else 
+    false ;;
 (*......................................................................
 Exercise 10:
 
@@ -290,8 +292,11 @@ this exercise, you may assume all inputs will be positive.
 
 ......................................................................*)
 
-let factorial (x : int) : int =
-  failwith "factorial not implementated" ;;
+let rec factorial (x : int) : int =
+  if x = 0 || x = 1 
+    then 1 
+  else  
+    x * factorial (x - 1) ;;
 
 (*......................................................................
 Exercise 12: Define a recursive function that sums all the elements
@@ -309,5 +314,5 @@ the mathematician Carl Freiedrich Gauss as a seven-year-old, *in his
 head*!)
 ......................................................................*)
 
-let sum_from_zero (x : int) : int =
-  failwith "sum_from_zero not implemented" ;;
+let rec sum_from_zero (x : int) : int =
+  if x = 0 then 0 else x + sum_from_zero (x - (abs(x)/x)) ;;
