@@ -240,8 +240,8 @@ assume (perhaps unrealistically) that all prices are given as
 integers. For this lab, you may assume all prices given are
 non-negative.
 ......................................................................*)
-(*let small_bills (price : int) : bool =
-  if price mod 20 <> 0 then true ;;*)
+let small_bills (price : int) : bool =
+  failwith "small_bills not implemented" ;;
 
 (*......................................................................
 Exercise 10:
