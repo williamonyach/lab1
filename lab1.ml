@@ -224,7 +224,10 @@ to the function.
 ......................................................................*)
 
 let say_hello (name : string) : string =
-  failwith "say_hello not implemented";;
+  if name = "Gabby" || name = "gabby" then
+  "Hi Gabby. Welcome home! How are you today?"
+else "Hi" ^name^ ". How are you today?" ;;
+
 
 (*......................................................................
 Exercise 9: Define a function, small_bills, that determines, given a
@@ -236,8 +239,8 @@ assume (perhaps unrealistically) that all prices are given as
 integers. For this lab, you may assume all prices given are
 non-negative.
 ......................................................................*)
-let small_bills (price : int) : bool =
-  failwith "small_bills not implemented" ;;
+(*let small_bills (price : int) : bool =
+  if price mod 20 <> 0 then true ;;*)
 
 (*......................................................................
 Exercise 10:
