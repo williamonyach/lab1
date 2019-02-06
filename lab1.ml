@@ -122,7 +122,7 @@ like.
         |
         |
         5
-)
+*)
 (*......................................................................
 Exercise 5: Associativity plays a role in cases when two operators
 used in the concrete syntax have the same precedence. For instance,
@@ -144,7 +144,11 @@ the operator. Use this expression to determine the associativity of
 the operator. Check your answer with a member of the course staff if
 you'd like.
 ......................................................................*)
-2 ** 4 ** 3
+(*
+16/4/2
+16/(4/2);; the result will be int 8
+(16/4)/2;; the result will be int 2
+*)
 (*======================================================================
 Part 2: Types and type inference
 
@@ -154,8 +158,6 @@ expressions below? Test your solution by uncommenting the examples
 (removing the (* and *) at start and end) and verifying that no typing
 error is generated.
 ......................................................................*)
-
-(*  <--- After you've replaced the ???s, remove this start of comment line
 
 let exercise6a : int = 42 ;;
 
@@ -171,9 +173,6 @@ let exercise6d : int -> bool =
 
 let exercise6e : int -> float -> int =
   fun x -> fun y -> x + int_of_float y ;;
-
-
-and remove this whole end of comment line too. ---->  *)
 
 (*======================================================================
 Part 3: First-order functional programming
