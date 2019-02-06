@@ -224,10 +224,11 @@ to the function.
 ......................................................................*)
 
 let say_hello (name : string) : string =
-  if name = "Gabby" || name = "gabby" then
-  "Hi Gabby. Welcome home! How are you today?"
-else "Hi" ^name^ ". How are you today?" ;;
 
+    if name = "Gabby" || name = "gabby" then
+      "Hi Gabby. Welcome home! How are you today?"
+    else 
+      "Hi" ^name^ ". How are you today?" ;;
 
 (*......................................................................
 Exercise 9: Define a function, small_bills, that determines, given a
